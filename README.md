@@ -22,7 +22,8 @@ in the end I subset the "new" dataframe to find only column with mean
 
 But since it takes also meanFreq() value I had to filter the data excluding those that were Freq
 
-and in the ned I made another dataframe only for standard deviation
+and in the end I made another dataframe only for standard deviation
 
 
 
+And to create the new tidy data sets I use the aggregate function, while to write the document in txt the write.table function
