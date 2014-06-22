@@ -60,7 +60,13 @@ Freq<-mean[grep("Freq()",names(mean))]
 
 meanfinal <- mean[names(mean)[!names(mean) %in% names(Freq)]]
 
+
 #another dataframe only for standard deviation
 
 std<-new[grep("std()",names(new))]
 
+
+# to create the new tidy data sets I use the aggregate function
+a<-aggregate.data.frame(new,by=list(new$activity,new$subject),mean,simplify=T)
+
+write.table(a, file = "final.txt",quote=T)
