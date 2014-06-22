@@ -69,4 +69,5 @@ std<-new[grep("std()",names(new))]
 # to create the new tidy data sets I use the aggregate function
 a<-aggregate.data.frame(new,by=list(new$activity,new$subject),mean,simplify=T)
 
+#this is the tiny dataset with mean for group.1 as activity and group.2 as subject
 write.table(a, file = "final.txt",quote=T)
